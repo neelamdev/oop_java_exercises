@@ -4,17 +4,32 @@ import java.util.Random;
 
 public class DomesticCat extends CatCategory {
 
+    Random random = new Random();
+    //private int randomness;
+
     public DomesticCat() {
         super.setSetting("domestic");
         super.setAverageHeight(23);
+
     }
 
+//    public DomesticCat(int randomNumber)
+//    {
+//        this.randomness = randomNumber;
+//    }
 
     @Override
     public String eat() {
+       // eatCat(random);
+        //String[] randomOutput = {"Purrrrrrr", "Purrrrrrr! It will do I suppose"};
+
+        return eatCat(random);
+    }
+
+    public String eatCat(Random random) {
         String[] randomOutput = {"Purrrrrrr", "Purrrrrrr! It will do I suppose"};
-        Random rand = new Random();
-        return randomOutput[rand.nextInt(randomOutput.length)];
+
+        return randomOutput[random.nextInt(randomOutput.length)];
     }
 
     @Override
