@@ -1,10 +1,7 @@
 package com.techreturners.cats;
 
-import org.junit.Ignore;
 import org.junit.Test;
-import testhelper.myRandomStub;
-
-import java.util.Random;
+import com.techreturners.cats.testhelper.RandomStub;
 
 import static org.junit.Assert.*;
 
@@ -60,22 +57,11 @@ public class CatTest {
         Cat cheetahCat = new CheetahCat();
         assertEquals("Zzzzzzz", cheetahCat.eat());
     }
-// @Ignore
-// @Test
-//    public void feedTheCat() {
-//        Cat domesticCat = new DomesticCat();
-//        //assertEquals("Purrrrrrr", domesticCat.eat());
-//    String eatComment = domesticCat.eat();
-//   assertTrue("Purrrrrrr".equals(eatComment) || "Purrrrrrr! It will do I suppose".equals(eatComment));
-//
-//    }
 
     @Test
     public void feedTheCat() {
         DomesticCat domesticCat = new DomesticCat();
-        String result = domesticCat.eatCat(new myRandomStub(0));
-        System.out.println(result);
+        String result = domesticCat.feedTheHappyCat(new RandomStub(0));
         assertEquals("Purrrrrrr", result);
-        //assertTrue((result.contains("Purrrrrrr")));
     }
 }

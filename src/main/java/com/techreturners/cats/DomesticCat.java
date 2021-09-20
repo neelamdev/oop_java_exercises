@@ -5,7 +5,6 @@ import java.util.Random;
 public class DomesticCat extends CatCategory {
 
     Random random = new Random();
-    //private int randomness;
 
     public DomesticCat() {
         super.setSetting("domestic");
@@ -13,20 +12,12 @@ public class DomesticCat extends CatCategory {
 
     }
 
-//    public DomesticCat(int randomNumber)
-//    {
-//        this.randomness = randomNumber;
-//    }
-
     @Override
     public String eat() {
-       // eatCat(random);
-        //String[] randomOutput = {"Purrrrrrr", "Purrrrrrr! It will do I suppose"};
-
-        return eatCat(random);
+        return feedTheHappyCat(random);
     }
 
-    public String eatCat(Random random) {
+    public String feedTheHappyCat(Random random) {
         String[] randomOutput = {"Purrrrrrr", "Purrrrrrr! It will do I suppose"};
 
         return randomOutput[random.nextInt(randomOutput.length)];
